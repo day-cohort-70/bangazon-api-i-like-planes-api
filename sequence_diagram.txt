@@ -1,0 +1,15 @@
+title Bangazon.........?
+
+Client->Products View: Get request for /products
+note over Products View: -invoke list method
+
+Products View ->db.sqlite3: -invoke all()
+db.sqlite3 -> Products View: -return list of\nProduct object instances
+
+note over Products View: store value of each supported\n query parameter in appropriate\n variable\n-category\n-quantity\n-order\n-direction\n-number_sold
+
+note over Products View: check for query params and execute\n filtering logic
+
+note over Products View: use ProductSerializer to convert Product object\ninstaces to JSON format
+
+Products View -> Client: send JSON array of product \nobjects to client

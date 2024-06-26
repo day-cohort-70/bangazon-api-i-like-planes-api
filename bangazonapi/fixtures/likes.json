@@ -1,0 +1,91 @@
+[
+    {
+      "model": "bangazonapi.like",
+      "pk": 1,
+      "fields": {
+        "customer": 4,
+        "product": 56
+      }
+    },
+    {
+      "model": "bangazonapi.like",
+      "pk": 2,
+      "fields": {
+        "customer": 5,
+        "product": 112
+      } 
+    },
+    {
+      "model": "bangazonapi.like",
+      "pk": 3,
+      "fields": {
+        "customer": 6,
+        "product": 33
+      }
+    },
+    {
+      "model": "bangazonapi.like",
+      "pk": 4,
+      "fields": {
+        "customer": 7,
+        "product": 91
+      }
+    },
+    {
+      "model": "bangazonapi.like",
+      "pk": 5,
+      "fields": {
+        "customer": 4,
+        "product": 67
+      }
+    },
+    {
+      "model": "bangazonapi.like",
+      "pk": 6,
+      "fields": {
+        "customer": 5,
+        "product": 78
+      }
+    },
+    {
+      "model": "bangazonapi.like",
+      "pk": 7,
+      "fields": {
+        "customer": 6,
+        "product": 125
+      }
+    },
+    {
+      "model": "bangazonapi.like",
+      "pk": 8,
+        "fields": {
+        "customer": 7,
+        "product": 43
+      }
+    },
+    {
+      "model": "bangazonapi.like",
+      "pk": 9,
+      "fields": {
+        "customer": 4,
+        "product": 97
+      }
+    },
+    {
+      "model": "bangazonapi.like",
+      "pk": 10,
+      "fields": {
+        "customer": 5,
+        "product": 15
+      }
+    },
+    {
+      "model": "bangazonapi.like",
+      "pk": 11,
+      "fields": {
+        "customer": 7,
+        "product": 102
+      }
+    }
+  ]
+  

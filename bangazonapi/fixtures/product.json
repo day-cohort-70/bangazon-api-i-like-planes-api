@@ -11,7 +11,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "Seoul",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -26,7 +27,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Paris",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -41,7 +43,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "Seoul",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -56,7 +59,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Paris",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -71,7 +75,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "Seoul",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -86,7 +91,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Vienna",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -101,7 +107,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "Seoul",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -116,7 +123,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Vienna",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -131,7 +139,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "Seoul",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -146,7 +155,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Vienna",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -161,7 +171,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -176,7 +187,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Vienna",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -191,7 +203,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -206,7 +219,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Vienna",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -221,7 +235,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -236,7 +251,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Vienna",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -251,7 +267,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -266,7 +283,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Vienna",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -281,7 +299,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -296,7 +315,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Paris",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -311,7 +331,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -326,7 +347,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Paris",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -341,7 +363,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -356,7 +379,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Paris",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -371,7 +395,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -386,7 +411,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Paris",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -401,7 +427,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -416,7 +443,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Paris",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -431,7 +459,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -446,7 +475,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Paris",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -461,7 +491,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -476,7 +507,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -491,7 +523,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -506,7 +539,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -521,7 +555,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -536,7 +571,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -551,7 +587,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -566,7 +603,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -581,7 +619,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -596,7 +635,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -611,7 +651,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "New York",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -626,7 +667,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -641,7 +683,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "Toronto",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -656,7 +699,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -671,7 +715,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "Toronto",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -686,7 +731,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -701,7 +747,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "Toronto",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -716,7 +763,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -731,7 +779,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "Toronto",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -746,7 +795,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -761,7 +811,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -776,7 +827,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -791,7 +843,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -806,7 +859,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -821,7 +875,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -836,7 +891,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -851,7 +907,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -866,7 +923,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -881,7 +939,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -896,7 +955,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -911,7 +971,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -926,7 +987,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Berlin",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -941,7 +1003,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -956,7 +1019,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -971,7 +1035,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -986,7 +1051,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1001,7 +1067,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1016,7 +1083,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1031,7 +1099,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1046,7 +1115,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1061,7 +1131,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1076,7 +1147,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1091,7 +1163,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1106,7 +1179,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1121,7 +1195,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1136,7 +1211,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1151,7 +1227,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1166,7 +1243,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1181,7 +1259,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1196,7 +1275,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1211,7 +1291,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1226,7 +1307,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1241,7 +1323,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1256,7 +1339,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1271,7 +1355,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1286,7 +1371,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1301,7 +1387,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1316,7 +1403,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1331,7 +1419,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1346,7 +1435,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1361,7 +1451,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1376,7 +1467,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1391,7 +1483,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1406,7 +1499,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1421,7 +1515,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1436,7 +1531,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1451,7 +1547,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1466,7 +1563,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1481,7 +1579,8 @@
             "created_date": "2019-05-21",
             "category_id": 2,
             "location": "London",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1496,7 +1595,8 @@
             "created_date": "2019-07-10",
             "category_id": 2,
             "location": "Moscow",
-            "image_path": "products/vehicle.png"
+            "image_path": "products/vehicle.png",
+            "store_id": 1
         }
     },
     {
@@ -1511,7 +1611,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Berlin",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1526,7 +1627,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Berlin",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1541,7 +1643,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Dubai",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1556,7 +1659,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "London",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1571,7 +1675,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Sydney",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1586,7 +1691,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "New York",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1601,7 +1707,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Sydney",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1616,7 +1723,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "London",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1631,7 +1739,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Tokyo",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1646,7 +1755,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Berlin",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1661,7 +1771,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Paris",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1676,7 +1787,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Dubai",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1691,7 +1803,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "London",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1706,7 +1819,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Paris",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1721,7 +1835,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Paris",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1736,7 +1851,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Paris",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1751,7 +1867,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Dubai",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1766,7 +1883,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "London",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1781,7 +1899,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Dubai",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1796,7 +1915,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "London",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1811,7 +1931,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Tokyo",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1826,7 +1947,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "London",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1841,7 +1963,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "New York",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1856,7 +1979,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Dubai",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1871,7 +1995,8 @@
             "created_date": "2023-01-01",
             "category_id": 5,
             "location": "Moscow",
-            "image_path": "products/clothing.png"
+            "image_path": "products/clothing.png",
+            "store_id": 2
         }
     },
     {
@@ -1886,7 +2011,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -1901,7 +2027,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -1916,7 +2043,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -1931,7 +2059,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -1946,7 +2075,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -1961,7 +2091,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -1976,7 +2107,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -1991,7 +2123,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2006,7 +2139,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2021,7 +2155,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2036,7 +2171,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2051,7 +2187,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2066,7 +2203,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2081,7 +2219,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2096,7 +2235,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2111,7 +2251,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2126,7 +2267,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2141,7 +2283,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2156,7 +2299,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2171,7 +2315,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2186,7 +2331,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2201,7 +2347,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2216,7 +2363,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2231,7 +2379,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2246,7 +2395,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2261,7 +2411,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2276,7 +2427,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2291,7 +2443,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2306,7 +2459,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2321,7 +2475,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2336,7 +2491,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2351,7 +2507,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2366,7 +2523,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2381,7 +2539,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     },
     {
@@ -2396,7 +2555,8 @@
             "created_date": "2023-03-14",
             "category_id": 1,
             "location": "Workshop",
-            "image_path": "products/tools.png"
+            "image_path": "products/tools.png",
+            "store_id": 3
         }
     }
 ]

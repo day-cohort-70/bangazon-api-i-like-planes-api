@@ -293,3 +293,13 @@ class Products(ViewSet):
             return Response(None, status=status.HTTP_204_NO_CONTENT)
 
         return Response(None, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+    
+    @action(methods=['post'], detail=True, url_path='add_to_order')
+    def add_to_order(self,request,pk=None):
+
+        user = request.auth.user
+        customer = Customer.objects.get(user=user)
+
+        return None
+        
+

@@ -35,7 +35,7 @@ class OrderSerializer(serializers.HyperlinkedModelSerializer):
             view_name='order',
             lookup_field='id'
         )
-        fields = ('id', 'url', 'created_date', 'payment_type', 'customer', 'lineitems', 'total_price')
+        fields = ('id', 'url', 'created_date', 'payment_type', 'customer', 'lineitems')
 
 
 class Orders(ViewSet):
@@ -148,7 +148,5 @@ class Orders(ViewSet):
 
         json_orders = OrderSerializer(
             orders, many=True, context={'request': request})
-        
-
 
         return Response(json_orders.data)

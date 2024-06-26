@@ -11,15 +11,15 @@
       "model": "bangazonapi.like",
       "pk": 2,
       "fields": {
-        "customer": 2,
+        "customer": 5,
         "product": 112
-      }
+      } 
     },
     {
       "model": "bangazonapi.like",
       "pk": 3,
       "fields": {
-        "customer": 8,
+        "customer": 6,
         "product": 33
       }
     },
@@ -35,7 +35,7 @@
       "model": "bangazonapi.like",
       "pk": 5,
       "fields": {
-        "customer": 3,
+        "customer": 4,
         "product": 67
       }
     },
@@ -43,7 +43,7 @@
       "model": "bangazonapi.like",
       "pk": 6,
       "fields": {
-        "customer": 6,
+        "customer": 5,
         "product": 78
       }
     },
@@ -51,7 +51,7 @@
       "model": "bangazonapi.like",
       "pk": 7,
       "fields": {
-        "customer": 1,
+        "customer": 6,
         "product": 125
       }
     },
@@ -59,7 +59,7 @@
       "model": "bangazonapi.like",
       "pk": 8,
         "fields": {
-        "customer": 5,
+        "customer": 7,
         "product": 43
       }
     },
@@ -67,7 +67,7 @@
       "model": "bangazonapi.like",
       "pk": 9,
       "fields": {
-        "customer": 8,
+        "customer": 4,
         "product": 97
       }
     },
@@ -75,7 +75,7 @@
       "model": "bangazonapi.like",
       "pk": 10,
       "fields": {
-        "customer": 4,
+        "customer": 5,
         "product": 15
       }
     },
@@ -85,78 +85,6 @@
       "fields": {
         "customer": 7,
         "product": 102
-      }
-    },
-    {
-      "model": "bangazonapi.like",
-      "pk": 12,
-      "fields": {
-        "customer": 2,
-        "product": 139
-      }
-    },
-    {
-      "model": "bangazonapi.like",
-      "pk": 13,
-      "fields": {
-        "customer": 3,
-        "product": 29
-      }
-    },
-    {
-      "model": "bangazonapi.like",
-      "pk": 14,
-      "fields": {
-        "customer": 6,
-        "product": 84
-      }
-    },
-    {
-      "model": "bangazonapi.like",
-      "pk": 15,
-      "fields": {
-        "customer": 1,
-        "product": 111
-      }
-    },
-    {
-      "model": "bangazonapi.like",
-      "pk": 16,
-      "fields": {
-        "customer": 5,
-        "product": 52
-      }
-    },
-    {
-      "model": "bangazonapi.like",
-      "pk": 17,
-      "fields": {
-        "customer": 8,
-        "product": 23
-      }
-    },
-    {
-      "model": "bangazonapi.like",
-      "pk": 18,
-      "fields": {
-        "customer": 4,
-        "product": 68
-      }
-    },
-    {
-      "model": "bangazonapi.like",
-      "pk": 19,
-      "fields": {
-        "customer": 7,
-        "product": 134
-      }
-    },
-    {
-      "model": "bangazonapi.like",
-      "pk": 20,
-      "fields": {
-        "customer": 2,
-        "product": 57
       }
     }
   ]

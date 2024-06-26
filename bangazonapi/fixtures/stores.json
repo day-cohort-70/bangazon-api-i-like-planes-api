@@ -1,0 +1,48 @@
+[
+    {
+      "model": "bangazonapi.store",
+      "pk": 1,
+      "fields": {
+        "seller": 3,
+        "name": "Electronics World",
+        "description": "A store that sells the latest electronics and gadgets."
+      }
+    },
+    {
+      "model": "bangazonapi.store",
+      "pk": 2,
+      "fields": {
+        "seller": 1,
+        "name": "Book Haven",
+        "description": "A paradise for book lovers with a wide range of books."
+      }
+    },
+    {
+      "model": "bangazonapi.store",
+      "pk": 3,
+      "fields": {
+        "seller": 5,
+        "name": "Gadget Central",
+        "description": "Your go-to place for the newest gadgets and accessories."
+      }
+    },
+    {
+      "model": "bangazonapi.store",
+      "pk": 4,
+      "fields": {
+        "seller": 2,
+        "name": "Clothing Emporium",
+        "description": "A store with a diverse collection of fashionable clothing."
+      }
+    },
+    {
+      "model": "bangazonapi.store",
+      "pk": 5,
+      "fields": {
+        "seller": 6,
+        "name": "Home Goods Store",
+        "description": "Everything you need for your home under one roof."
+      }
+    }
+  ]
+  

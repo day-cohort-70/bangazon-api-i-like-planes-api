@@ -6,6 +6,7 @@ from .customer import Customer
 from .productcategory import ProductCategory
 from .orderproduct import OrderProduct
 from .productrating import ProductRating
+from .store import Store
 
 
 class Product(SafeDeleteModel):
@@ -25,6 +26,8 @@ class Product(SafeDeleteModel):
     image_path = models.ImageField(
         upload_to='products', height_field=None,
         width_field=None, max_length=None, null=True)
+    store = models.ForeignKey(
+        Store, on_delete=models.DO_NOTHING, related_name='products')
 
     @property
     def number_sold(self):

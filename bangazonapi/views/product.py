@@ -1,16 +1,17 @@
 """View module for handling requests about products"""
 from rest_framework.decorators import action
-from bangazonapi.models.recommendation import Recommendation
+from django.utils import timezone
 import base64
 from django.core.files.base import ContentFile
 from django.http import HttpResponseServerError
-from rest_framework.viewsets import ViewSet
-from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from bangazonapi.models import Product, Customer, ProductCategory
+from rest_framework.viewsets import ViewSet
+from rest_framework.response import Response
+from bangazonapi.models import Product, Customer, ProductCategory, Order, OrderProduct
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.parsers import MultiPartParser, FormParser
+from bangazonapi.models.recommendation import Recommendation
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -293,3 +294,36 @@ class Products(ViewSet):
             return Response(None, status=status.HTTP_204_NO_CONTENT)
 
         return Response(None, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+    
+    @action(methods=['post'], detail=True, url_path='add_to_order')
+    def add_to_order(self,request,pk=None):
+
+        customer = Customer.objects.get(user=request.auth.user)
+        product = Product.objects.get(pk=pk)
+        date = timezone.now().strftime("%Y-%m-%d")
+
+        try:
+            open_order = Order.objects.get(customer=customer, payment_type=None)
+
+        except Order.DoesNotExist:
+            open_order = Order()
+
+            open_order.customer = customer
+            open_order.created_date = date
+            open_order.save()
+
+        if product.quantity > 0:
+
+            product.quantity -= 1
+            product.save()
+
+            order_product = OrderProduct()
+
+            order_product.order = open_order
+            order_product.product = product
+
+            order_product.save()
+
+            return Response(None, status=status.HTTP_201_CREATED)
+        
+        return Response({"message":'there is no more inventory for this product'}, status=status.HTTP_400_BAD_REQUEST)

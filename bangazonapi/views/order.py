@@ -89,6 +89,7 @@ class Orders(ViewSet):
         except Exception as ex:
             return HttpResponseServerError(ex)
 
+# This function only handles PUT for payment type
     def update(self, request, pk=None):
         """
         @api {PUT} /order/:id PUT new payment for order
@@ -109,12 +110,20 @@ class Orders(ViewSet):
         @apiSuccessExample {json} Success
             HTTP/1.1 204 No Content
         """
+    
         customer = Customer.objects.get(user=request.auth.user)
         order = Order.objects.get(pk=pk, customer=customer)
-        order.payment_type_id = request.data["payment_type"]
-        order.save()
+        try:
+            payment = Payment.objects.get(pk=request.data['payment_type'])
+            order.payment_type_id = payment
+            order.save()
+            return Response({}, status=status.HTTP_204_NO_CONTENT)
 
-        return Response({}, status=status.HTTP_204_NO_CONTENT)
+        except Payment.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        
+
+        
 
     def list(self, request):
         """
@@ -150,10 +159,14 @@ class Orders(ViewSet):
         orders = Order.objects.filter(customer=customer)
 
         payment = self.request.query_params.get('payment_type', None)
-        if payment is not None:
+
+        try:
+            payment = Payment.objects.get(pk=payment)
             orders = orders.filter(payment_type_id=payment)
-
-        json_orders = OrderSerializer(
+            json_orders = OrderSerializer(
             orders, many=True, context={'request': request})
-
-        return Response(json_orders.data)
+            return Response(json_orders.data)
+        except Payment.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+    
+   

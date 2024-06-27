@@ -152,3 +152,6 @@ migrations
 docs
 Pipfile.lock
 poetry.lock
+
+# Ignore VS Code settings
+.vscode/settings.json

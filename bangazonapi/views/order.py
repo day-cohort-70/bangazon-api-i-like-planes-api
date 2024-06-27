@@ -8,12 +8,14 @@ from rest_framework import status
 from rest_framework.decorators import action
 from bangazonapi.models import Order, Payment, Customer, Product, OrderProduct
 from .product import ProductSerializer
+from .paymenttype import PaymentSerializer
 
 
 class OrderLineItemSerializer(serializers.HyperlinkedModelSerializer):
     """JSON serializer for line items """
 
-    product = ProductSerializer(many=False)
+    product = ProductSerializer(many=False) 
+    #  this is a nested serializer
 
     class Meta:
         model = OrderProduct
@@ -28,14 +30,19 @@ class OrderSerializer(serializers.HyperlinkedModelSerializer):
     """JSON serializer for customer orders"""
 
     lineitems = OrderLineItemSerializer(many=True)
+    total_price = serializers.SerializerMethodField()
+    payment_type = PaymentSerializer(many=False)
 
+    def get_total_price (self, obj):
+        return obj.total_price
+    
     class Meta:
         model = Order
         url = serializers.HyperlinkedIdentityField(
             view_name='order',
             lookup_field='id'
         )
-        fields = ('id', 'url', 'created_date', 'payment_type', 'customer', 'lineitems')
+        fields = ('id', 'url', 'created_date', 'payment_type', 'customer', 'lineitems', 'total_price')
 
 
 class Orders(ViewSet):
@@ -140,7 +147,7 @@ class Orders(ViewSet):
             ]
         """
         customer = Customer.objects.get(user=request.auth.user)
-        orders = Order.objects.filter(customer=customer)
+        orders = Order.objects.filter(customer=customer).exclude(payment_type_id=None)
 
         payment = self.request.query_params.get('payment_id', None)
         if payment is not None:

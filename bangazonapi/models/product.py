@@ -7,6 +7,7 @@ from .productcategory import ProductCategory
 from .orderproduct import OrderProduct
 from .productrating import ProductRating
 from .store import Store
+from rest_framework.response import Response
 
 
 class Product(SafeDeleteModel):
@@ -58,7 +59,7 @@ class Product(SafeDeleteModel):
         """Average rating calculated attribute for each product
 
         Returns:
-            number -- The average rating for the product
+        number -- The average rating for the product
         """
         try:
             ratings = ProductRating.objects.filter(product=self)
@@ -68,8 +69,9 @@ class Product(SafeDeleteModel):
 
             avg = total_rating / len(ratings)
             return avg
-        except:
-            avg = 0
+    
+        except ZeroDivisionError:
+            avg = None
             return avg
 
     class Meta:

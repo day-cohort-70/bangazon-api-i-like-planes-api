@@ -294,36 +294,3 @@ class Products(ViewSet):
             return Response(None, status=status.HTTP_204_NO_CONTENT)
 
         return Response(None, status=status.HTTP_405_METHOD_NOT_ALLOWED)
-    
-    @action(methods=['post'], detail=True, url_path='add_to_order')
-    def add_to_order(self,request,pk=None):
-
-        customer = Customer.objects.get(user=request.auth.user)
-        product = Product.objects.get(pk=pk)
-        date = timezone.now().strftime("%Y-%m-%d")
-
-        try:
-            open_order = Order.objects.get(customer=customer, payment_type=None)
-
-        except Order.DoesNotExist:
-            open_order = Order()
-
-            open_order.customer = customer
-            open_order.created_date = date
-            open_order.save()
-
-        if product.quantity > 0:
-
-            product.quantity -= 1
-            product.save()
-
-            order_product = OrderProduct()
-
-            order_product.order = open_order
-            order_product.product = product
-
-            order_product.save()
-
-            return Response(None, status=status.HTTP_201_CREATED)
-        
-        return Response({"message":'there is no more inventory for this product'}, status=status.HTTP_400_BAD_REQUEST)

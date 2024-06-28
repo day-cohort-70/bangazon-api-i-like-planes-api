@@ -246,9 +246,6 @@ class Profile(ViewSet):
 
             if product.quantity > 0:
 
-                product.quantity -= 1
-                product.save()
-
                 line_item = OrderProduct()
                 line_item.product = product
                 line_item.order = open_order

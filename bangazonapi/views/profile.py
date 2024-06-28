@@ -233,10 +233,8 @@ class Profile(ViewSet):
             @apiError (404) {String} message  Not found message
             """
 
-
-
             try:
-                open_order = Order.objects.get(customer=current_user)
+                open_order = Order.objects.get(customer=current_user,payment_type=None)
 
             except Order.DoesNotExist as ex:
                 open_order = Order()

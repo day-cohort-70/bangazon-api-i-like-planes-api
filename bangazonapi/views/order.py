@@ -165,3 +165,17 @@ class Orders(ViewSet):
             orders, many=True, context={'request': request})
 
         return Response(json_orders.data)
+    
+    def destroy(self, request, pk=None):
+
+        current_user = Customer.objects.get(user=request.auth.user)
+        current_order = Order.objects.get(pk=pk)
+
+        current_order.delete()
+        
+        open_order = Order()
+        open_order.created_date = datetime.datetime.now()
+        open_order.customer = current_user
+        open_order.save()
+
+        return Response({}, status=status.HTTP_204_NO_CONTENT)

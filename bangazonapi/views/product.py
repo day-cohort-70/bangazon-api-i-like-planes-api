@@ -251,6 +251,7 @@ class Products(ViewSet):
         order = self.request.query_params.get('order_by', None)
         direction = self.request.query_params.get('direction', None)
         number_sold = self.request.query_params.get('number_sold', None)
+        min_price = self.request.query_params.get('min_price', None)
 
         if order is not None:
             order_filter = order
@@ -274,6 +275,11 @@ class Products(ViewSet):
                 return False
 
             products = filter(sold_filter, products)
+        # this if statement below says if the min_price is represented in the query then
+        # let products equal a list of filtered products using the lambda anonymous function.
+        # the lambda function works like this in javascript -> products.filter(obj=> obj.price>=min_price)
+        if min_price is not None:
+            products = list(filter(lambda product: product.price>=int(min_price),products))
 
         serializer = ProductSerializer(
             products, many=True, context={'request': request})

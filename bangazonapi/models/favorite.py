@@ -1,6 +1,7 @@
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from .store import Store
+from .customer import Customer
 from .productcategory import ProductCategory
 from .orderproduct import OrderProduct
 from safedelete.models import SafeDeleteModel

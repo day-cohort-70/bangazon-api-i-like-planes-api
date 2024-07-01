@@ -243,16 +243,19 @@ class Profile(ViewSet):
 
             product = Product.objects.get(pk=request.data["product_id"])
 
-            line_item = OrderProduct()
-            line_item.product = product
-            line_item.order = open_order
-            line_item.save()
+            if product.quantity > 0:
 
-            line_item_json = LineItemSerializer(
-                line_item, many=False, context={'request': request})
+                line_item = OrderProduct()
+                line_item.product = product
+                line_item.order = open_order
+                line_item.save()
 
-            return Response(line_item_json.data, status=status.HTTP_201_CREATED)
+                line_item_json = LineItemSerializer(
+                    line_item, many=False, context={'request': request})
 
+                return Response(line_item_json.data, status=status.HTTP_201_CREATED)
+            else:
+                return Response({"message": 'This item is out of stock'}, status=status.HTTP_400_BAD_REQUEST)
 
         return Response({}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
 

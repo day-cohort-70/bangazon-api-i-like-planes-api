@@ -12,6 +12,7 @@ from bangazonapi.models import OrderProduct, Favorite
 from bangazonapi.models import Recommendation
 from .product import ProductSerializer
 from .order import OrderSerializer
+from .store import Store
 
 
 class Profile(ViewSet):
@@ -398,6 +399,12 @@ class FavoriteSellerSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'url', 'user',)
         depth = 1
 
+class StoreSerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Store
+        fields = ('id', 'name', 'description', )
+
 
 class FavoriteSerializer(serializers.HyperlinkedModelSerializer):
     """JSON serializer for favorites
@@ -405,12 +412,12 @@ class FavoriteSerializer(serializers.HyperlinkedModelSerializer):
     Arguments:
         serializers
     """
-
+    store = StoreSerializer()
 
     class Meta:
         model = Favorite
         fields = ('id', 'store')
-        depth = 1
+
 
 
 

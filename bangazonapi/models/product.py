@@ -40,7 +40,7 @@ class Product(SafeDeleteModel):
         sold = OrderProduct.objects.filter(
             product=self, order__payment_type__isnull=False)
         return sold.count()
-
+                          
     @property
     def can_be_rated(self):
         """can_be_rated property, which will be calculated per user

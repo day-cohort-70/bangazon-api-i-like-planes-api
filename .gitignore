@@ -154,3 +154,9 @@ Pipfile.lock
 poetry.lock
 
 
+
+# Ignore .vscode settings
+.vscode/settings.json
+
+# Ignore .vscode settings
+.vscode/settings.json

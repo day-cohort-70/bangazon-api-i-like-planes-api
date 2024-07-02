@@ -83,7 +83,7 @@ class Profile(ViewSet):
         try:
             current_user = Customer.objects.get(user=request.auth.user)
             current_user.recommends = Recommendation.objects.filter(recommender=current_user)
-            current_user.favorites = Favorite.objects.get(user=request.auth.user)
+
 
             serializer = ProfileSerializer(
                 current_user, many=False, context={'request': request})
@@ -413,8 +413,8 @@ class FavoriteSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Favorite
-        fields = ('id', 'seller')
-        depth = 2
+        fields = ('id', 'seller', 'store')
+        depth = 1
 
 
 

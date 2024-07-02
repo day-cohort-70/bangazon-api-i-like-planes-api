@@ -41,18 +41,17 @@ class Stores(ViewSet):
     #     new_store.seller = Customer.objects.get(user = request.auth.user)
     #     new_store.save()
 
-    # def retrieve(self, request, pk=None):
-    #     try:
-    #         customer = Customer.objects.get(user=request.auth.user)
-    #         store = Stores.objects.get(pk=pk)
-    #         serializer = StoreSerializer(store, context={'request': request})
-    #         return Response(serializer.data)
+    def retrieve(self, request, pk=None):
+        try:
+            store = Store.objects.get(pk=pk)
+            serializer = StoreSerializer(store, context={'request': request})
+            return Response(serializer.data)
 
-    #     except Store.DoesNotExist as ex:
-    #         return Response(
-    #             {'message': 'The requested store does not exist, or you do not have permission to access it.'},
-    #             status=status.HTTP_404_NOT_FOUND
-    #         )
+        except Store.DoesNotExist as ex:
+            return Response(
+                {'message': 'The requested store does not exist, or you do not have permission to access it.'},
+                status=status.HTTP_404_NOT_FOUND
+            )
         
     def list(self, request):
         """_summary_

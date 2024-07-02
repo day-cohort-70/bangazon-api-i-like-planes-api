@@ -406,11 +406,10 @@ class FavoriteSerializer(serializers.HyperlinkedModelSerializer):
         serializers
     """
 
-    seller = FavoriteSellerSerializer(many=False)
 
     class Meta:
         model = Favorite
-        fields = ('id', 'seller', 'store')
+        fields = ('id', 'store')
         depth = 1
 
 
@@ -423,10 +422,9 @@ class ProfileSerializer(serializers.ModelSerializer):
     """
     user = UserSerializer(many=False)
     recommends = RecommenderSerializer(many=True)
-    favorites = FavoriteSerializer(many=True)
 
     class Meta:
         model = Customer
         fields = ('id', 'url', 'user', 'phone_number',
-                  'address', 'payment_types', 'recommends', 'favorites')
+                  'address', 'payment_types', 'recommends')
         depth = 1

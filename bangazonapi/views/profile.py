@@ -485,11 +485,11 @@ class ProfileSerializer(serializers.ModelSerializer):
         serializers
     """
     user = UserSerializer(many=False)
-
     favorites = FavoriteSerializer(many=True)
+    store = ProfileStoreSerializer(many=False)
 
     class Meta:
         model = Customer
         fields = ('id', 'url', 'user', 'phone_number',
-                  'address', 'payment_types', 'favorites')
-        depth = 1
+                  'address', 'payment_types', 'favorites', 'store')
+        depth = 2

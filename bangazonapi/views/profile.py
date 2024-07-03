@@ -78,12 +78,39 @@ class Profile(ViewSet):
                             }
                         }
                     }
+                ],
+                "favorites": [
+                    {
+                        "id": 1,
+                        "store": {
+                            "id": 1,
+                            "name": "Electronics World",
+                            "description": "A store that sells the latest electronics and gadgets."
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "store": {
+                            "id": 2,
+                            "name": "Book Haven",
+                            "description": "A paradise for book lovers with a wide range of books."
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "store": {
+                            "id": 3,
+                            "name": "Gadget Central",
+                            "description": "Your go-to place for the newest gadgets and accessories."
+                        }
+                    }
                 ]
             }
         """
         try:
             current_user = Customer.objects.get(user=request.auth.user)
             current_user.recommends = Recommendation.objects.filter(recommender=current_user)
+            current_user.favorites = Favorite.objects.filter(customer=current_user)
 
 
             serializer = ProfileSerializer(
@@ -262,7 +289,7 @@ class Profile(ViewSet):
         return Response({}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
 
-    @action(methods=['get'], detail=False)
+    @action(methods=['get', 'post'], detail=False)
     def favoritesellers(self, request):
         """
         @api {GET} /profile/favoritesellers GET favorite sellers
@@ -310,12 +337,34 @@ class Profile(ViewSet):
                 }
             ]
         """
-        customer = Customer.objects.get(user=request.auth.user)
-        favorites = Favorite.objects.filter(customer=customer)
+        if request.method == 'GET':
+            customer = Customer.objects.get(user=request.auth.user)
+            favorites = Favorite.objects.filter(customer=customer)
 
-        serializer = FavoriteSerializer(
-            favorites, many=True, context={'request': request})
-        return Response(serializer.data)
+            serializer = FavoriteSerializer(
+                favorites, many=True, context={'request': request})
+            return Response(serializer.data)
+        
+        elif request.method == 'POST':
+
+            store_id = request.data.get('store_id')
+            customer = Customer.objects.get(user=request.auth.user)
+
+            if not store_id:
+                return Response({'detail': 'store_id is required'}, status=status.HTTP_400_BAD_REQUEST)
+            
+            try:
+                store = Store.objects.get(pk=store_id)
+            except Store.DoesNotExist:
+                return Response({'detail': 'Store not found'}, status=status.HTTP_404_NOT_FOUND)
+
+            favorite, created = Favorite.objects.get_or_create(customer=customer, store=store)
+
+            if created:
+                return Response({'detail': 'Favorite created successfully'}, status=status.HTTP_201_CREATED)
+            else:
+                return Response({'detail': 'Favorite already exists'}, status=status.HTTP_200_OK)
+            
 
 
 class LineItemSerializer(serializers.HyperlinkedModelSerializer):
@@ -428,10 +477,11 @@ class ProfileSerializer(serializers.ModelSerializer):
         serializers
     """
     user = UserSerializer(many=False)
-    recommends = RecommenderSerializer(many=True)
+
+    favorites = FavoriteSerializer(many=True)
 
     class Meta:
         model = Customer
         fields = ('id', 'url', 'user', 'phone_number',
-                  'address', 'payment_types', 'recommends')
+                  'address', 'payment_types', 'favorites')
         depth = 1

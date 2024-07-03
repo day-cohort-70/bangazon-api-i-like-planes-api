@@ -6,7 +6,6 @@ from .customer import Customer
 from .productcategory import ProductCategory
 from .orderproduct import OrderProduct
 from .productrating import ProductRating
-from .store import Store
 from rest_framework.response import Response
 
 
@@ -17,7 +16,7 @@ class Product(SafeDeleteModel):
     customer = models.ForeignKey(
         Customer, on_delete=models.DO_NOTHING, related_name='products')
     price = models.FloatField(
-        validators=[MinValueValidator(0.00), MaxValueValidator(10000.00)],)
+        validators=[MinValueValidator(0.00), MaxValueValidator(17500.00)],)
     description = models.CharField(max_length=255,)
     quantity = models.IntegerField(validators=[MinValueValidator(0)],)
     created_date = models.DateField(auto_now_add=True)
@@ -25,10 +24,9 @@ class Product(SafeDeleteModel):
         ProductCategory, on_delete=models.DO_NOTHING, related_name='products')
     location = models.CharField(max_length=50,)
     image_path = models.ImageField(
-        upload_to='products', height_field=None,
         width_field=None, max_length=None, null=True)
     store = models.ForeignKey(
-        Store, on_delete=models.DO_NOTHING, related_name='products')
+        "Store", on_delete=models.DO_NOTHING, related_name='products')
 
     @property
     def number_sold(self):

@@ -79,11 +79,28 @@ class Profile(ViewSet):
                         }
                     }
                 ]
+                "recommendations": [
+                    {
+                        "product": {
+                            "id": 1,
+                            "name": "Nicer Optima"
+                        },
+                        "customer": {
+                            "id": 7,
+                            "user": {
+                                "first_name": "Brenda",
+                                "last_name": "Long",
+                                "email": "brenda@brendalong.com"
+                            }
+                        }
+                    }
+                ],
             }
         """
         try:
             current_user = Customer.objects.get(user=request.auth.user)
             current_user.recommends = Recommendation.objects.filter(recommender=current_user)
+            current_user.recommendations = Recommendation.objects.filter(customer=current_user)
 
             serializer = ProfileSerializer(
                 current_user, many=False, context={'request': request})
@@ -360,7 +377,16 @@ class ProfileProductSerializer(serializers.ModelSerializer):
 
 
 class RecommenderSerializer(serializers.ModelSerializer):
-    """JSON serializer for recommendations"""
+    """JSON serializer for items recommended by the user"""
+    customer = CustomerSerializer()
+    product = ProfileProductSerializer()
+
+    class Meta:
+        model = Recommendation
+        fields = ('product', 'customer',)
+
+class RecommendationSerializer(serializers.ModelSerializer):
+    """JSON serializer for recommendations to the user"""
     customer = CustomerSerializer()
     product = ProfileProductSerializer()
 
@@ -381,11 +407,12 @@ class ProfileSerializer(serializers.ModelSerializer):
     store = ProfileStoreSerializer(many=False)
     user = UserSerializer(many=False)
     recommends = RecommenderSerializer(many=True)
+    recommendations = RecommendationSerializer(many=True)
 
     class Meta:
         model = Customer
         fields = ('id', 'url', 'user', 'phone_number',
-                  'address', 'payment_types', 'recommends', 'store')
+                  'address', 'payment_types', 'recommends', 'recommendations', 'store')
         depth = 1
 
 

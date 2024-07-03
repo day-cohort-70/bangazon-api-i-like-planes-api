@@ -336,6 +336,10 @@ class Profile(ViewSet):
                     }
                 }
             ]
+        @api {POST} /profile/favoritesellers GET favorite sellers
+            {
+                "detail": "Favorite created successfully"
+            }
         """
         if request.method == 'GET':
             customer = Customer.objects.get(user=request.auth.user)

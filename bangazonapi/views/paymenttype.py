@@ -1,4 +1,5 @@
 """View module for handling requests about customer payment types"""
+import datetime
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
@@ -35,7 +36,7 @@ class Payments(ViewSet):
         new_payment.merchant_name = request.data["merchant_name"]
         new_payment.account_number = request.data["account_number"]
         new_payment.expiration_date = request.data["expiration_date"]
-        new_payment.create_date = request.data["create_date"]
+        new_payment.create_date = datetime.datetime.now().strftime("%Y-%m-%d")
         customer = Customer.objects.get(user=request.auth.user)
         new_payment.customer = customer
         new_payment.save()

@@ -5,12 +5,14 @@
 """
 
 """View module for handling requests about product categories"""
+from rest_framework.decorators import action
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from bangazonapi.models import ProductCategory
+from bangazonapi.models import ProductCategory, Product
+from .product import ProductSerializer
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 
@@ -23,6 +25,18 @@ class ProductCategorySerializer(serializers.HyperlinkedModelSerializer):
             lookup_field='id'
         )
         fields = ('id', 'url', 'name')
+
+class ProductCategoryRecentProductsSerializer(serializers.ModelSerializer):
+
+    recent_products = serializers.SerializerMethodField()
+    def get_recent_products(self,obj):
+        recent_products = Product.objects.filter(category=obj).order_by('-created_date')[:5]
+        serializer = ProductSerializer(recent_products, many=True, context=self.context)
+        return serializer.data
+
+    class Meta:
+        model = ProductCategory
+        fields = ('id','name','recent_products')
 
 
 class ProductCategories(ViewSet):
@@ -64,3 +78,15 @@ class ProductCategories(ViewSet):
         serializer = ProductCategorySerializer(
             product_category, many=True, context={'request': request})
         return Response(serializer.data)
+
+    @action(methods=['get'], detail=False)
+    def recentproducts(self, request):
+
+        if request.method == "GET":
+            
+            product_categories = ProductCategory.objects.all()
+            serializer = ProductCategoryRecentProductsSerializer(product_categories, many=True, context={'request': request})
+            return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+        

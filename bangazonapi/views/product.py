@@ -12,6 +12,7 @@ from bangazonapi.models import Product, Customer, ProductCategory, Order, OrderP
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.parsers import MultiPartParser, FormParser
 from bangazonapi.models.recommendation import Recommendation
+from django.contrib.auth.models import User
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -297,7 +298,8 @@ class Products(ViewSet):
         if request.method == "POST":
             rec = Recommendation()
             rec.recommender = Customer.objects.get(user=request.auth.user)
-            rec.customer = Customer.objects.get(user__id=request.data["recipient"])
+            rec.user = User.objects.get(username=request.data["username"])
+            rec.customer = Customer.objects.get(user=rec.user)
             rec.product = Product.objects.get(pk=pk)
 
             rec.save()

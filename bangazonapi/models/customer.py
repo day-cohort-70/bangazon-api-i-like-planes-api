@@ -18,8 +18,8 @@ class Customer(models.Model):
 
     @property
     def favorites(self):
-        return self.__recommends
+        return self.__favorites
 
     @favorites.setter
     def favorites(self, value):
-        self.__recommends = value
+        self.__favorites = value

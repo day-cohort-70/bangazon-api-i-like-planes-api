@@ -1,0 +1,38 @@
+[
+    {
+        "model": "bangazonapi.recommendation",
+        "pk": 3,
+        "fields": {
+            "customer": 7,
+            "product": 5,
+            "recommender": 4
+        }
+    },
+    {
+        "model": "bangazonapi.recommendation",
+        "pk": 4,
+        "fields": {
+            "customer": 7,
+            "product": 6,
+            "recommender": 5
+        }
+    },
+    {
+        "model": "bangazonapi.recommendation",
+        "pk": 5,
+        "fields": {
+            "customer": 5,
+            "product": 3,
+            "recommender": 7
+        }
+    },
+    {
+        "model": "bangazonapi.recommendation",
+        "pk": 6,
+        "fields": {
+            "customer": 5,
+            "product": 4,
+            "recommender": 4
+        }
+    }
+    ]

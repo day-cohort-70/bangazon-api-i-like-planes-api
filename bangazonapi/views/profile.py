@@ -63,6 +63,32 @@ class Profile(ViewSet):
                         "customer": "http://localhost:8000/customers/7"
                     }
                 ],
+                "favorites": [
+            {
+                "id": 1,
+                "store": {
+                    "id": 1,
+                    "name": "Electronics World",
+                    "description": "A store that sells the latest electronics and gadgets."
+                }
+            },
+            {
+                "id": 2,
+                "store": {
+                    "id": 2,
+                    "name": "Book Haven",
+                    "description": "A paradise for book lovers with a wide range of books."
+                }
+            },
+            {
+                "id": 3,
+                "store": {
+                    "id": 3,
+                    "name": "Gadget Central",
+                    "description": "Your go-to place for the newest gadgets and accessories."
+                }
+            }
+                ],
                 "recommends": [
                     {
                         "product": {
@@ -99,9 +125,10 @@ class Profile(ViewSet):
         """
         try:
             current_user = Customer.objects.get(user=request.auth.user)
+            current_user.favorites = Favorite.objects.filter(customer=current_user)
             current_user.recommends = Recommendation.objects.filter(recommender=current_user)
             current_user.recommendations = Recommendation.objects.filter(customer=current_user)
-            current_user.favorites = Favorite.objects.filter(customer=current_user)
+
 
             serializer = ProfileSerializer(
                 current_user, many=False, context={'request': request})
@@ -466,4 +493,4 @@ class ProfileSerializer(serializers.ModelSerializer):
         model = Customer
         fields = ('id', 'url', 'user', 'phone_number',
                   'address', 'payment_types', 'favorites', 'store','recommends', 'recommendations')
-        depth = 1
+        depth = 2

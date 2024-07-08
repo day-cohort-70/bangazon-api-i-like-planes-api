@@ -16,3 +16,4 @@ python manage.py loaddata order
 python manage.py loaddata order_product
 python manage.py loaddata favoritesellers
 python manage.py loaddata likes
+python manage.py loaddata recommendation

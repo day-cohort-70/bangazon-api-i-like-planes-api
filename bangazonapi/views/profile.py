@@ -63,6 +63,32 @@ class Profile(ViewSet):
                         "customer": "http://localhost:8000/customers/7"
                     }
                 ],
+                "favorites": [
+            {
+                "id": 1,
+                "store": {
+                    "id": 1,
+                    "name": "Electronics World",
+                    "description": "A store that sells the latest electronics and gadgets."
+                }
+            },
+            {
+                "id": 2,
+                "store": {
+                    "id": 2,
+                    "name": "Book Haven",
+                    "description": "A paradise for book lovers with a wide range of books."
+                }
+            },
+            {
+                "id": 3,
+                "store": {
+                    "id": 3,
+                    "name": "Gadget Central",
+                    "description": "Your go-to place for the newest gadgets and accessories."
+                }
+            }
+                ],
                 "recommends": [
                     {
                         "product": {
@@ -78,39 +104,30 @@ class Profile(ViewSet):
                             }
                         }
                     }
-                ],
-                "favorites": [
+                ]
+                "recommendations": [
                     {
-                        "id": 1,
-                        "store": {
+                        "product": {
                             "id": 1,
-                            "name": "Electronics World",
-                            "description": "A store that sells the latest electronics and gadgets."
-                        }
-                    },
-                    {
-                        "id": 2,
-                        "store": {
-                            "id": 2,
-                            "name": "Book Haven",
-                            "description": "A paradise for book lovers with a wide range of books."
-                        }
-                    },
-                    {
-                        "id": 3,
-                        "store": {
-                            "id": 3,
-                            "name": "Gadget Central",
-                            "description": "Your go-to place for the newest gadgets and accessories."
+                            "name": "Nicer Optima"
+                        },
+                        "customer": {
+                            "id": 7,
+                            "user": {
+                                "first_name": "Brenda",
+                                "last_name": "Long",
+                                "email": "brenda@brendalong.com"
+                            }
                         }
                     }
-                ]
+                ],
             }
         """
         try:
             current_user = Customer.objects.get(user=request.auth.user)
-            current_user.recommends = Recommendation.objects.filter(recommender=current_user)
             current_user.favorites = Favorite.objects.filter(customer=current_user)
+            current_user.recommends = Recommendation.objects.filter(recommender=current_user)
+            current_user.recommendations = Recommendation.objects.filter(customer=current_user)
 
 
             serializer = ProfileSerializer(
@@ -336,19 +353,20 @@ class Profile(ViewSet):
                     }
                 }
             ]
-        @api {POST} /profile/favoritesellers GET favorite sellers
+            @api {POST} /profile/favoritesellers GET favorite sellers
             {
                 "detail": "Favorite created successfully"
             }
         """
-        if request.method == 'GET':
-            customer = Customer.objects.get(user=request.auth.user)
-            favorites = Favorite.objects.filter(customer=customer)
 
-            serializer = FavoriteSerializer(
-                favorites, many=True, context={'request': request})
-            return Response(serializer.data)
-        
+        if request.method == 'GET':
+                customer = Customer.objects.get(user=request.auth.user)
+                favorites = Favorite.objects.filter(customer=customer)
+
+                serializer = FavoriteSerializer(
+                    favorites, many=True, context={'request': request})
+                return Response(serializer.data)
+
         elif request.method == 'POST':
 
             store_id = request.data.get('store_id')
@@ -356,7 +374,7 @@ class Profile(ViewSet):
 
             if not store_id:
                 return Response({'detail': 'store_id is required'}, status=status.HTTP_400_BAD_REQUEST)
-            
+
             try:
                 store = Store.objects.get(pk=store_id)
             except Store.DoesNotExist:
@@ -368,7 +386,6 @@ class Profile(ViewSet):
                 return Response({'detail': 'Favorite created successfully'}, status=status.HTTP_201_CREATED)
             else:
                 return Response({'detail': 'Favorite already exists'}, status=status.HTTP_200_OK)
-            
 
 
 class LineItemSerializer(serializers.HyperlinkedModelSerializer):
@@ -414,7 +431,16 @@ class ProfileProductSerializer(serializers.ModelSerializer):
 
 
 class RecommenderSerializer(serializers.ModelSerializer):
-    """JSON serializer for recommendations"""
+    """JSON serializer for items recommended by the user"""
+    customer = CustomerSerializer()
+    product = ProfileProductSerializer()
+
+    class Meta:
+        model = Recommendation
+        fields = ('product', 'customer',)
+
+class RecommendationSerializer(serializers.ModelSerializer):
+    """JSON serializer for recommendations to the user"""
     customer = CustomerSerializer()
     product = ProfileProductSerializer()
 
@@ -426,7 +452,7 @@ class ProfileStoreSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Store
         fields = ('id', 'name', 'description')
-
+        
 
 
 class FavoriteUserSerializer(serializers.HyperlinkedModelSerializer):
@@ -440,6 +466,7 @@ class FavoriteUserSerializer(serializers.HyperlinkedModelSerializer):
         model = User
         fields = ('first_name', 'last_name', 'username')
         depth = 1
+
 
 
 class FavoriteSellerSerializer(serializers.HyperlinkedModelSerializer):
@@ -460,8 +487,7 @@ class StoreSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Store
-        fields = ('id', 'name', 'description', )
-
+        fields = ('id', 'name', 'description',)
 
 class FavoriteSerializer(serializers.HyperlinkedModelSerializer):
     """JSON serializer for favorites
@@ -469,13 +495,12 @@ class FavoriteSerializer(serializers.HyperlinkedModelSerializer):
     Arguments:
         serializers
     """
+
     store = StoreSerializer()
 
     class Meta:
         model = Favorite
-        fields = ('id', 'store')
-
-
+        fields = ('id', 'store',)
 
 
 class ProfileSerializer(serializers.ModelSerializer):
@@ -487,9 +512,11 @@ class ProfileSerializer(serializers.ModelSerializer):
     user = UserSerializer(many=False)
     favorites = FavoriteSerializer(many=True)
     store = ProfileStoreSerializer(many=False)
+    recommends = RecommenderSerializer(many=True)
+    recommendations = RecommendationSerializer(many=True)
 
     class Meta:
         model = Customer
         fields = ('id', 'url', 'user', 'phone_number',
-                  'address', 'payment_types', 'favorites', 'store')
+                  'address', 'payment_types', 'favorites', 'store','recommends', 'recommendations')
         depth = 2

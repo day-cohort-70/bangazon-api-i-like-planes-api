@@ -306,7 +306,7 @@ class Profile(ViewSet):
         return Response({}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
 
-    @action(methods=['get'], detail=False)
+    @action(methods=['get', 'post'], detail=False)
     def favoritesellers(self, request):
         """
         @api {GET} /profile/favoritesellers GET favorite sellers
@@ -353,13 +353,39 @@ class Profile(ViewSet):
                     }
                 }
             ]
+            @api {POST} /profile/favoritesellers GET favorite sellers
+            {
+                "detail": "Favorite created successfully"
+            }
         """
-        customer = Customer.objects.get(user=request.auth.user)
-        favorites = Favorite.objects.filter(customer=customer)
 
-        serializer = FavoriteSerializer(
-            favorites, many=True, context={'request': request})
-        return Response(serializer.data)
+        if request.method == 'GET':
+                customer = Customer.objects.get(user=request.auth.user)
+                favorites = Favorite.objects.filter(customer=customer)
+
+                serializer = FavoriteSerializer(
+                    favorites, many=True, context={'request': request})
+                return Response(serializer.data)
+
+        elif request.method == 'POST':
+
+            store_id = request.data.get('store_id')
+            customer = Customer.objects.get(user=request.auth.user)
+
+            if not store_id:
+                return Response({'detail': 'store_id is required'}, status=status.HTTP_400_BAD_REQUEST)
+
+            try:
+                store = Store.objects.get(pk=store_id)
+            except Store.DoesNotExist:
+                return Response({'detail': 'Store not found'}, status=status.HTTP_404_NOT_FOUND)
+
+            favorite, created = Favorite.objects.get_or_create(customer=customer, store=store)
+
+            if created:
+                return Response({'detail': 'Favorite created successfully'}, status=status.HTTP_201_CREATED)
+            else:
+                return Response({'detail': 'Favorite already exists'}, status=status.HTTP_200_OK)
 
 
 class LineItemSerializer(serializers.HyperlinkedModelSerializer):
@@ -443,19 +469,19 @@ class FavoriteUserSerializer(serializers.HyperlinkedModelSerializer):
 
 
 
-# class FavoriteSellerSerializer(serializers.HyperlinkedModelSerializer):
-#     """JSON serializer for favorite sellers
+class FavoriteSellerSerializer(serializers.HyperlinkedModelSerializer):
+    """JSON serializer for favorite sellers
 
-#     Arguments:
-#         serializers
-#     """
+    Arguments:
+        serializers
+    """
 
-#     user = FavoriteUserSerializer(many=False)
+    user = FavoriteUserSerializer(many=False)
 
-#     class Meta:
-#         model = Customer
-#         fields = ('id', 'url', 'user',)
-#         depth = 1
+    class Meta:
+        model = Customer
+        fields = ('id', 'url', 'user',)
+        depth = 1
 
 class StoreSerializer(serializers.HyperlinkedModelSerializer):
 

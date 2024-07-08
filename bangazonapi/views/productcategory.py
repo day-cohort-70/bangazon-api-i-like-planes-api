@@ -87,6 +87,3 @@ class ProductCategories(ViewSet):
             product_categories = ProductCategory.objects.all()
             serializer = ProductCategoryRecentProductsSerializer(product_categories, many=True, context={'request': request})
             return Response(serializer.data, status=status.HTTP_200_OK)
-
-
-        

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Stores</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        
+        {% for store in stores %}
+        <tr>
+            <td>{{store.name}}</td>
+            <td>{{store.description}}</td>
+        </tr>
+        
+    {% endfor %}
+</table>
+
+
+</body>
+</html>

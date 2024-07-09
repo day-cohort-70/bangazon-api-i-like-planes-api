@@ -8,7 +8,7 @@ from rest_framework import serializers
 from rest_framework import status
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
-from bangazonapi.models import Product, Customer, ProductCategory, Order, OrderProduct
+from bangazonapi.models import Product, Customer, ProductCategory, Order, OrderProduct,Store
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.parsers import MultiPartParser, FormParser
 from bangazonapi.models.recommendation import Recommendation
@@ -91,9 +91,12 @@ class Products(ViewSet):
         new_product.description = request.data["description"]
         new_product.quantity = request.data["quantity"]
         new_product.location = request.data["location"]
+        
 
         customer = Customer.objects.get(user=request.auth.user)
         new_product.customer = customer
+
+        new_product.store = Store.objects.get(seller_id=customer.id)
 
         product_category = ProductCategory.objects.get(pk=request.data["category_id"])
         new_product.category = product_category
@@ -105,12 +108,15 @@ class Products(ViewSet):
 
             new_product.image_path = data
 
-        new_product.save()
+        if new_product.price <= 17500:
+            new_product.save()
 
-        serializer = ProductSerializer(
-            new_product, context={'request': request})
+            serializer = ProductSerializer(
+                new_product, context={'request': request})
 
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+        return Response({'Unable to add product'}, status=status.HTTP_400_BAD_REQUEST)
 
     def retrieve(self, request, pk=None):
         """

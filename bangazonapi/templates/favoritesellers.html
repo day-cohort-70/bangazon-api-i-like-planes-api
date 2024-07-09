@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ current_user }}</title>
+</head>
+<body>
+    <ul>
+        {% for seller in favorite_sellers %}
+            <li>{{ seller.id }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

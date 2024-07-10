@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Completed Orders</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer Name</th>
+            <th>Total Paid</th>
+            <th>Payment Type</th>
+        </tr>
+        
+        {% for order in completed_orders %}
+        <tr>
+            <td>{{order.order_id}}</td>
+            <td>{{order.customer_name}}</td>
+            <td>{{order.total_paid}}</td>
+            <td>{{order.payment_type.merchant_name}}</td>
+        </tr>
+        
+    {% endfor %}
+</table>
+
+
+</body>
+</html>

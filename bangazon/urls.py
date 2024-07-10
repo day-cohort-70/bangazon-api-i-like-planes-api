@@ -7,6 +7,7 @@ from bangazonapi.models import *
 from bangazonapi.views import *
 from bangazonapi.views import reports
 
+
 # pylint: disable=invalid-name
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'products', Products, 'product')
@@ -20,6 +21,7 @@ router.register(r'paymenttypes', Payments, 'payment')
 router.register(r'profile', Profile, 'profile')
 router.register(r'stores', Stores, 'store')
 
+
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
@@ -28,5 +30,7 @@ urlpatterns = [
     path('login', login_user),
     path('api-token-auth', obtain_auth_token),
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
+    path('reports/expensiveproducts', reports.ProductsReport,),
+    path('reports/storereport', StoreReport,)
     path('reports/favoritesellers', reports.favoritesellers, name='reports/favoritesellers')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

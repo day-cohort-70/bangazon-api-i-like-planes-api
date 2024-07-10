@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ current_user_obj.user.username }}</title>
+</head>
+<body>
+    <h1>{{ current_user_obj.user.username }}'s favorite sellers</h1>
+
+    <ul>
+        {% for seller in favorite_sellers %}
+            <li>{{ seller.username }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

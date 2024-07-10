@@ -30,5 +30,5 @@ urlpatterns = [
     path('api-token-auth', obtain_auth_token),
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
     # this works for all reports 
-    path('reports/orders', reports.OrdersReport, name='ordersreports' )
+    path('reports/orders', OrdersReport, name='ordersreports' )
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

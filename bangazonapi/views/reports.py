@@ -7,7 +7,6 @@ def favoritesellers(request):
     current_user_id = request.GET.get('customer', None)
     current_user_obj = Customer.objects.get(id=current_user_id)
     favorited_objs = Favorite.objects.filter(customer=current_user_obj)
-    print(favorited_objs)
 
     favorite_sellers = []
 

@@ -28,5 +28,5 @@ urlpatterns = [
     path('login', login_user),
     path('api-token-auth', obtain_auth_token),
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
-    path('reports/favoritesellers?customer=<str:pk>', reports.favoritesellers, name='reports/favoritesellers')
+    path('reports/favoritesellers', reports.favoritesellers, name='reports/favoritesellers')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

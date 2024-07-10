@@ -41,3 +41,12 @@ def StoreReport(request):
 
     }
     return render(request,'allstores.html', context)
+
+
+def InexpensiveProductsReport(request):
+    inexpensive_products_object = Product.objects.filter(price__lte=999)
+
+    context = {
+        'products': inexpensive_products_object
+    }
+    return render(request, 'inexpensiveproducts.html', context)

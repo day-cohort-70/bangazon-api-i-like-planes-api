@@ -32,5 +32,6 @@ urlpatterns = [
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
     path('reports/expensiveproducts', reports.ProductsReport,),
     path('reports/storereport', StoreReport,),
-    path('reports/favoritesellers', reports.favoritesellers, name='reports/favoritesellers')
+    path('reports/favoritesellers', reports.favoritesellers, name='reports/favoritesellers'),
+    path('reports/inexpensiveproducts', InexpensiveProductsReport,name='inexpensive-products')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -50,3 +50,16 @@ def InexpensiveProductsReport(request):
         'products': inexpensive_products_object
     }
     return render(request, 'inexpensiveproducts.html', context)
+
+
+def OrdersReport(request):
+
+    status = request.GET.get('status', None)
+    if status == 'incomplete':
+        orders = Order.objects.filter(payment_type=None)
+    else:
+        orders = Order.objects.filter(payment_type__isnull=False)
+    context = {
+        'orders': orders,
+    }
+    return render(request, 'incompleteorders.html', context)

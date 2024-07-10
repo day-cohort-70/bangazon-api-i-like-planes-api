@@ -33,7 +33,7 @@ urlpatterns = [
     path('reports/expensiveproducts', reports.ProductsReport,),
     path('reports/storereport', StoreReport,),
     path('reports/favoritesellers', reports.favoritesellers, name='reports/favoritesellers'),
-    path('reports/inexpensiveproducts', InexpensiveProductsReport,name='inexpensive-products')
+    path('reports/inexpensiveproducts', InexpensiveProductsReport,name='inexpensive-products'),
     # this works for all reports 
-    path('reports/orders', OrdersReport, name='ordersreports' )
+    path('reports/orders', OrdersReport, name='ordersreports' ),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

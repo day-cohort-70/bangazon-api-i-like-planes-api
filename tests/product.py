@@ -2,6 +2,7 @@ import json
 import datetime
 from rest_framework import status
 from rest_framework.test import APITestCase
+from bangazonapi.models import Store, Customer
 
 
 class ProductTests(APITestCase):
@@ -17,6 +18,13 @@ class ProductTests(APITestCase):
         self.token = json_response["token"]
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
+        # Create a customer instance
+        customer = Customer.objects.get(user__username="steve")
+
+        # Create a store for the customer
+        store = Store.objects.create(name="Steve's Store", description="Store for Steve", seller=customer)
+
+        # Create a category
         url = "/productcategories"
         data = {"name": "Sporting Goods"}
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token)
@@ -95,6 +103,13 @@ class ProductTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(json_response), 3)
 
-    # TODO: Delete product
+    def test_delete_product(self):
+        #create a product to delete
+        #delete that product Ex: response = self.client.delete(f"/games/{game.id}")
+        #verify the status code Ex: self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        #try to GET the product to verify it does NOT exist Ex: response = self.client.get(f"/games/{game.id}")
+        #                                                       self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
 
     # TODO: Product can be rated. Assert average rating exists.
+        pass

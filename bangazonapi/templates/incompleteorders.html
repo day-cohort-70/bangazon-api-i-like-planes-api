@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Incomplete Orders</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Order Id</th>
+            <th>Customer Name</th>
+            <th>Order Total</th>
+            {% if status == 'incomplete' %}
+                <th>Payment Type</th>
+            {% endif %}
+        </tr>
+        {% for order in orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.customer.user.first_name}} {{order.customer.user.last_name}}</td>
+                <td>{{ order.total_price }}</td>
+                <td>{{ order.payment_type.merchant_name }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

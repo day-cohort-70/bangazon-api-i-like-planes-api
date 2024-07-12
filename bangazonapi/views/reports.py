@@ -3,7 +3,7 @@ from bangazonapi.models import *
 from django.contrib.auth.models import User
 
 def favoritesellers(request):
-
+    #can we use .select_related('favorite' , etc)
     current_user_id = request.GET.get('customer', None)
     current_user_obj = Customer.objects.get(id=current_user_id)
     favorited_objs = Favorite.objects.filter(customer=current_user_obj)
